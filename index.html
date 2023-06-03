@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Password Generator App</title>
+</head>
+
+<body>
+  <main>
+    <div class="section-1">
+      <h3>Password Generator</h3>
+    </div>
+    <div class="section-2">
+      <input type="text" id="generated Password" placeholder="P4$5W0rD!">
+      <p>COPIED</p>
+      <div class="copy-img">
+        <img src="./assets/icon-copy.svg" alt="Copy-Icon">
+      </div>
+    </div>
+    <div class="section-3">
+      <div class="section-3-container">
+
+        <div class="length">
+          <p>Character Length</p>
+          <h2 id="passwordLength">10</h2>
+        </div>
+
+        <div class="slide-container">
+          <input type="range" min="1" max="16" value="1" class="slider" id="myRange">
+        </div>
+
+        <div class="checkbox">
+          <label class="container">
+            <p>Include Uppercase Letters</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <p>Include Lowercase Letters</p>
+            <input type="checkbox">
+            <span class="checkmark">
+          </label>
+          <label class="container">
+            <p>Include Numbers</p>
+            <input type="checkbox">
+            <span class="checkmark">
+          </label>
+          <label class="container">
+            <p>Include Symbols</p>
+            <input type="checkbox">
+            <span class="checkmark">
+          </label>
+        </div>
+
+        <div class="strength">
+          <div class="strength-text">
+            <p>STRENGTH</p>
+          </div>
+          <div class="strength-value">
+            <h3>MEDIUM</h3>
+            <div class="strength-boxes">
+              <div class="strength-1"></div>
+              <div class="strength-2"></div>
+              <div class="strength-3"></div>
+              <div class="strength-4"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="generate-button">
+          <p>GENERATE</p>
+          <img src="./assets/icon-arrow-right.svg" alt="Arrow Icon">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
