@@ -22,9 +22,9 @@
       <h3>Password Generator</h3>
     </div>
     <div class="section-2">
-      <input type="text" id="generated Password" placeholder="P4$5W0rD!">
-      <p>COPIED</p>
-      <div class="copy-img">
+      <input type="text" id="generatedPassword" placeholder="P4$5W0rD!" autocomplete="off" readonly>
+      <p id="copyText">COPIED</p>
+      <div id="copyImage" class="copy-img">
         <img src="./assets/icon-copy.svg" alt="Copy-Icon">
       </div>
     </div>
@@ -33,32 +33,32 @@
 
         <div class="length">
           <p>Character Length</p>
-          <h2 id="passwordLength">10</h2>
+          <h2 id="passwordLength">1</h2>
         </div>
 
         <div class="slide-container">
-          <input type="range" min="1" max="16" value="1" class="slider" id="myRange">
+          <input type="range" min="1" max="16" value="1" class="slider" id="sliderRange">
         </div>
 
         <div class="checkbox">
           <label class="container">
             <p>Include Uppercase Letters</p>
-            <input type="checkbox" checked="checked">
+            <input id="uppercaseCheckbox" type="checkbox" checked="checked">
             <span class="checkmark"></span>
           </label>
           <label class="container">
             <p>Include Lowercase Letters</p>
-            <input type="checkbox">
+            <input id="lowercaseCheckbox" type="checkbox">
             <span class="checkmark">
           </label>
           <label class="container">
             <p>Include Numbers</p>
-            <input type="checkbox">
+            <input id="numbersCheckbox" type="checkbox">
             <span class="checkmark">
           </label>
           <label class="container">
             <p>Include Symbols</p>
-            <input type="checkbox">
+            <input id="symbolsCheckbox" type="checkbox">
             <span class="checkmark">
           </label>
         </div>
@@ -68,23 +68,24 @@
             <p>STRENGTH</p>
           </div>
           <div class="strength-value">
-            <h3>MEDIUM</h3>
+            <h3 id="strengthText">TOO WEAK!</h3>
             <div class="strength-boxes">
-              <div class="strength-1"></div>
-              <div class="strength-2"></div>
-              <div class="strength-3"></div>
-              <div class="strength-4"></div>
+              <div class="strength-1" id="strengthBox1"></div>
+              <div class="strength-2" id="strengthBox2"></div>
+              <div class="strength-3" id="strengthBox3"></div>
+              <div class="strength-4" id="strengthBox4"></div>
             </div>
           </div>
         </div>
 
-        <div class="generate-button">
+        <div class="generate-button" id="generateButton">
           <p>GENERATE</p>
-          <img src="./assets/icon-arrow-right.svg" alt="Arrow Icon">
         </div>
       </div>
     </div>
   </main>
+
+  <script src="./app.js"></script>
 </body>
 
 </html>

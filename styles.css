@@ -5,7 +5,7 @@
     --clr-white-50--: #817D92;
     --clr-green--: #A4FFAF;
     --clr-red--: #F64A4A;
-    --clr-orrange--: #FB7C58;
+    --clr-orange--: #FB7C58;
     --clr-yellow--: #F8CD65;
 
     --head-l-size--: 32px;
@@ -102,15 +102,25 @@ main {
     appearance: none;
     width: 24px;
     height: 24px;
-    background: var(--clr-white-75--);
+    background: var(--clr-green--);
     cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:active {
+    outline: 2px solid var(--clr-green--);
+    background: var(--clr-dark-75--);
 }
 
 .slider::-moz-range-thumb {
     width: 24px;
     height: 24px;
-    background: var(--clr-white-75--);
+    background: var(--clr-green--);
     cursor: pointer;
+}
+
+.slider::-moz-range-thumb:active {
+    outline: 2px solid var(--clr-green--);
+    background: var(--clr-dark-75--);
 }
 
 /* checkbox */
@@ -141,12 +151,17 @@ main {
 /* Create a custom checkbox */
 .checkmark {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 4px;
+    left: 4px;
     height: 16px;
     width: 16px;
     background-color: var(--clr-dark-50--);
     outline: 2px solid #E6E5EA;
+}
+
+.checkmark:active {
+    outline: 2px solid var(--clr-green--);
+
 }
 
 /* On mouse-over, add a grey background color */
@@ -199,6 +214,11 @@ main {
     border: 2px solid var(--clr-white-75--);
 }
 
+.strength-1 {
+    background-color: var(--clr-red--);
+    border: 2px solid var(--clr-red--);
+}
+
 .section-1 h3 {
     color: var(--clr-white-50--);
 }
@@ -236,6 +256,7 @@ main {
     display: block;
     margin-left: 16px;
     margin-right: 32px;
+    cursor: pointer;
 }
 
 .section-3-container {
@@ -272,11 +293,13 @@ main {
     align-items: center;
     justify-content: center;
     color: var(--clr-dark-50--);
+    cursor: pointer;
 }
 
-.generate-button img {
-    width: 12px;
-    height: 12px;
+.generate-button:active {
+    background-color: var(--clr-dark-50--);
+    color: var(--clr-green--);
+    outline: 2px solid var(--clr-green--);
 }
 
 .strength-value {
@@ -297,4 +320,106 @@ main {
 
 .length h2 {
     color: var(--clr-green--);
+}
+
+#copyText {
+    display: none;
+}
+
+@media screen and (width <=600px) {
+    main {
+        margin: 0 32px;
+    }
+}
+
+@media screen and (width <=500px) {
+    main {
+        margin: 0 24px;
+    }
+
+    .strength-text {
+        margin-left: 16px;
+    }
+
+    .strength-value {
+        margin-right: 16px;
+        align-items: center;
+        text-align: right;
+    }
+
+    .section-2 input {
+        font-size: 24px;
+    }
+
+    ::placeholder {
+        font-size: 24px;
+    }
+
+    .length p {
+        font-size: 16px;
+    }
+
+    .length h2 {
+        font-size: 24px;
+    }
+
+    label p {
+        font-size: 16px;
+    }
+
+    .strength-text p {
+        font-size: 16px;
+    }
+
+    .strength-value h3 {
+        font-size: 18px;
+    }
+
+    .generate-button p {
+        font-size: 16px;
+    }
+
+    .section-1 h3 {
+        font-size: 16px;
+    }
+
+    .section-2 input {
+        margin: 16px 0px 16px 16px;
+        height: 32px;
+    }
+
+    .section-2 .copy-img {
+        margin-right: 16px;
+    }
+
+    .section-3-container {
+        padding: 16px;
+    }
+
+    #copyImage img {
+        width: 18px;
+    }
+
+    .length {
+        margin-bottom: 16px;
+    }
+
+    .container {
+        margin-bottom: 16px;
+        padding-left: 40px;
+    }
+
+    .strength {
+        margin-bottom: 16px;
+    }
+
+    main {
+        gap: 16px;
+    }
+}
+
+@media screen and (width <=400px) {
+    main {
+        margin: 0 16px;
+    }
 }
