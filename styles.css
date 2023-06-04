@@ -379,10 +379,6 @@ main {
         font-size: 16px;
     }
 
-    .section-1 h3 {
-        font-size: 16px;
-    }
-
     .section-2 input {
         margin: 16px 0px 16px 16px;
         height: 32px;
@@ -420,6 +416,18 @@ main {
 
 @media screen and (width <=400px) {
     main {
-        margin: 0 16px;
+        margin: 64px 16px 0 16px;
+    }
+    
+    body {
+        align-items: flex-start;
+    }
+
+    main{
+        margin-top: 64px;
+    }
+
+    .section-1 h3 {
+        font-size: 18px;
     }
 }
