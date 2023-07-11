@@ -98,16 +98,25 @@ function generatePassword(length, options) {
     if (options.includeSpecialChars) {
         charset += "!@#$%^&*()_-+=<>?";
     }
+    if (
+        !options.includeLowercase &&
+        !options.includeUppercase &&
+        !options.includeNumbers &&
+        !options.includeSpecialChars
+    ) {
+        generatedPassword.value = "No options selected";
+        generatedPassword.style.color = "#F64A4A"
+    } else {
+        const charsetLength = charset.length;
+        let password = "";
 
-    const charsetLength = charset.length;
-    let password = "";
-
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charsetLength);
-        password += charset[randomIndex];
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charsetLength);
+            password += charset[randomIndex];
+        }
+        generatedPassword.style.color = "#E6E5EA"
+        generatedPassword.value = password;
     }
-
-    generatedPassword.value = password;
 }
 
 // Copy the generated Password.
